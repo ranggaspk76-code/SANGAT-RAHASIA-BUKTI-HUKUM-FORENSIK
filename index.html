@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALINAN ARSIP FORENSIK RESMI - SPPG WARA LAGALIGO KOTA PALOPO (OKTOBER 2026)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-cyan: #06b6d4;
+      --accent-red: #ef4444;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .doc-card {
+        border: 1px solid #000 !important;
+        background: #fff !important;
+        color: #000 !important;
+        page-break-inside: avoid;
+        margin-bottom: 24px !important;
+      }
+      .header-box {
+        border-bottom: 2px solid #000 !important;
+      }
+      .table-custom th, .table-custom td {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #020617;
+      padding: 16px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--accent-cyan);
+      color: #000;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background-color: #1e293b;
+    }
+
+    .header-box {
+      background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
+      border: 1px solid #4338ca;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .badge-red { background: #450a0a; color: #fca5a5; border: 1px solid #991b1b; }
+    .badge-amber { background: #451a03; color: #fcd34d; border: 1px solid #b45309; }
+    .badge-cyan { background: #083344; color: #67e8f9; border: 1px solid #0e7490; }
+    .badge-emerald { background: #022c22; color: #6ee7b7; border: 1px solid #047857; }
+
+    h1 { font-size: 24px; margin-bottom: 8px; font-weight: 800; color: #fff; }
+    h2 { font-size: 18px; margin-top: 32px; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 8px; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 15px; margin-bottom: 8px; color: #fff; font-weight: 700; }
+
+    .doc-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-family: monospace;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 8px;
+    }
+
+    .doc-content {
+      background-color: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      white-space: pre-wrap;
+      color: #e2e8f0;
+      line-height: 1.6;
+      max-height: 480px;
+      overflow-y: auto;
+    }
+
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+    .table-custom th, .table-custom td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    .table-custom th {
+      background-color: #020617;
+      color: var(--text-muted);
+      font-family: monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    .table-custom tr:nth-child(even) {
+      background-color: #1e293b;
+    }
+    .table-custom tr.highlight-row {
+      background-color: #450a0a !important;
+      font-weight: bold;
+    }
+
+    .hash-seal {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--accent-emerald);
+      word-break: break-all;
+      background: #022c22;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #065f46;
+      margin-top: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .person-card {
+      background: #0b0f19;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Top Action Toolbar -->
+    <div class="toolbar no-print">
+      <div>
+        <strong style="color: #38bdf8;">ARSIP DIGITAL FORENSIK RESMI</strong>
+        <span style="color: #64748b; margin: 0 8px;">|</span>
+        <span style="color: #94a3b8; font-size: 12px;">Format Salinan HTML Lengkap (Bisa Dibuka Tanpa Internet)</span>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button class="btn" onclick="window.print()">
+          🖨️ Cetak / Simpan PDF
+        </button>
+        <button class="btn btn-outline" onclick="window.close()">
+          ✕ Tutup
+        </button>
+      </div>
+    </div>
+
+    <!-- Header Box -->
+    <div class="header-box">
+      <span class="badge badge-red">SANGAT RAHASIA · BUKTI HUKUM FORENSIK</span>
+      <h1>DOSSIER FORENSIK SPPG WARA LAGALIGO KOTA PALOPO</h1>
+      <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">
+        Penyelenggara: <strong>Yayasan Pondok Pesantren Modern Datok Sulaiman (YPMDS)</strong> · Jalan We Cudai, Kel. Lagaligo, Kec. Wara, Kota Palopo, Sulawesi Selatan.
+      </p>
+      <div style="margin-top: 12px; display: flex; gap: 16px; font-size: 12px; font-family: monospace; color: #94a3b8; flex-wrap: wrap;">
+        <span>NO REGISTRASI: <strong>LHP-K-PLP/2026/X-10-0984/MBG</strong></span>
+        <span>AUDITOR UTAMA: <strong>dr. Irsan Anugrah (Kadis Dinkes Palopo)</strong></span>
+        <span>TANGGAL AUDIT: <strong>21 OKTOBER 2026</strong></span>
+      </div>
+    </div>
+
+    <!-- Section: Latar Belakang & Kesimpulan Evaluasi Dinkes -->
+    <h2>1. TEMUAN DAN HASIL EVALUASI DINAS KESEHATAN KOTA PALOPO</h2>
+    <div class="doc-card">
+      <p style="margin-bottom: 12px; font-size: 14px;">
+        Pada Oktober 2026, beredar video viral di media sosial terkait temuan menu <strong>Makan Bergizi Gratis (MBG)</strong> dari SPPG Wara Lagaligo yang tidak layak dikonsumsi karena mengeluarkan aroma berbau busuk dan ditemukan ulat/larva.
+      </p>
+      <div class="grid-2">
+        <div style="background: #020617; padding: 14px; border-radius: 8px; border: 1px solid #1e293b;">
+          <h3 style="color: #38bdf8; font-size: 13px;">A. Audit Lapangan & Pemeriksaan Fisik:</h3>
+          <p style="font-size: 12px; color: #cbd5e1; margin-top: 4px;">
+            Kepala Dinas Kesehatan Kota Palopo (<strong>dr. Irsan Anugrah</strong>) bersama Tim Kesehatan Lingkungan (Kesling) turun langsung melakukan investigasi ke dapur SPPG Wara Lagaligo di Jl. We Cudai pada <strong>21 Oktober 2026</strong> serta mengambil sampel makanan guna diuji di laboratorium.
+          </p>
+        </div>
+        <div style="background: #020617; padding: 14px; border-radius: 8px; border: 1px solid #1e293b;">
+          <h3 style="color: #10b981; font-size: 13px;">B. Hasil Pemeriksaan & Ketiadaan Sabotase:</h3>
+          <p style="font-size: 12px; color: #cbd5e1; margin-top: 4px;">
+            Dinkes memastikan bahwa masalah pada olahan ayam tersebut terjadi pada mutu bahan baku karkas dan kegagalan proses/penyimpanan rantai dingin (cold chain), namun memastikan <strong>TIDAK ADA indikasi kesengajaan atau unsur sabotase</strong> dari pihak eksternal.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Transkrip Lengkap 5 Dokumen Digital Penting -->
+    <h2>2. SALINAN TRANSKRIP DOKUMEN BUKTI FORENSIK DIGITAL TERENKRIPSI (ROOT DATA)</h2>
+
+    <!-- Dokumen 1 -->
+    <div class="doc-card">
+      <span class="badge badge-cyan">BERKAS 01 · BERITA ACARA RESMI</span>
+      <h3>DOC-FORENSIK-DINKES-LHP-21OKT2026.enc</h3>
+      <div class="doc-meta">
+        <span>Pengesah: dr. Irsan Anugrah (Kadis Dinkes Palopo)</span>
+        <span>Ukuran: 4.8 MB</span>
+        <span>Status: Terdekripsi Resmi</span>
+      </div>
+      <div class="doc-content">PEMERINTAH KOTA PALOPO - DINAS KESEHATAN
+Jl. Samiun No. 2, Kota Palopo, Sulawesi Selatan
+
+BERITA ACARA AUDIT LAPANGAN & INVESTIGASI SANITASI
+Nomor: 440/BA-KESLING/X/2026/089
+
+Pada hari Rabu, tanggal 21 Oktober 2026, Tim Audit Lapangan yang dipimpin langsung oleh:
+Nama: dr. Irsan Anugrah
+Jabatan: Kepala Dinas Kesehatan Kota Palopo
+Bersama: Tim Sanitarian Kesehatan Lingkungan & Seksi Farmamin Dinkes Palopo
+
+Telah melakukan inspeksi mendadak ke fasilitas pengolahan:
+Nama Unit: SPPG Wara Lagaligo
+Pengelola: Yayasan Pondok Pesantren Modern Datok Sulaiman
+Alamat: Jalan We Cudai, Kelurahan Lagaligo, Kecamatan Wara, Kota Palopo
+
+TEMUAN FAKTA LAPANGAN:
+1. Kondisi Makanan: Olahan daging ayam goreng pada menu Makan Bergizi Gratis (MBG) yang viral terbukti secara visual dan organoleptik mengalami kerusakan parah, berbau busuk, dan ditemukan larva (ulat).
+2. Sumber Masalah: Pemeriksaan memastikan masalah terjadi murni pada kualitas bahan baku daging ayam yang tidak segar (rusak sebelum dimasak) serta kegagalan rantai dingin (cold chain) selama proses penyimpanan semalaman di fasilitas dapur.
+3. Ketiadaan Sabotase: Tim Dinkes memastikan TIDAK ADA indikasi unsur sabotase atau kesengajaan peracunan dari pihak luar, melainkan kegagalan manajemen sanitasi dan suhu penyimpanan.
+4. Perizinan & Kepatuhan: SPPG Wara Lagaligo belum memiliki Sertifikat Laik Higiene Sanitasi (SLHS) yang sah, dan masuk dalam daftar unit SPPG di Kota Palopo yang mendapat teguran keras Pemkot terkait belum lengkapnya PBG dan SLF.
+
+REKOMENDASI DINKES:
+- Penghentian sementara penggunaan suplier daging ayam tanpa sertifikasi NKV.
+- Penundaan distribusi menu olahan hewani berisiko tinggi.
+- Wajib melengkapi perizinan PBG/SLF ke Dinas PUPR dan PTSP Palopo.
+
+Tercatat & Ditandatangani di Palopo, 21 Oktober 2026.
+Kepala Dinas Kesehatan Kota Palopo
+[Cap & TTD Digital Resmi]
+dr. Irsan Anugrah</div>
+      <div class="hash-seal">SHA-256 HASH: b7e21a8849c0d2918847128e019234bce8912401823901bce47102834910247a</div>
+    </div>
+
+    <!-- Dokumen 2 -->
+    <div class="doc-card">
+      <span class="badge badge-amber">BERKAS 02 · PERIZINAN PEMKOT PALOPO</span>
+      <h3>SURAT-TEGURAN-PEMKOT-PBG-SLF-015.enc</h3>
+      <div class="doc-meta">
+        <span>Penerbit: Dinas PUPR & DPMPTSP Kota Palopo</span>
+        <span>Ukuran: 2.4 MB</span>
+        <span>Klasifikasi: DOKUMEN RESMI PEMKOT</span>
+      </div>
+      <div class="doc-content">PEMERINTAH KOTA PALOPO
+SEKRETARIAT DAERAH
+Jl. Andi Djemma No. 66, Kota Palopo
+
+SURAT TEGURAN PELANGGARAN KEPATUHAN PERIZINAN GEDUNG
+Nomor: 640/PUPR-WAS/X/2026/015
+Sifat: Penting / Peringatan Keras
+
+Kepada Yth:
+Pimpinan Yayasan Pondok Pesantren Modern Datok Sulaiman
+(Pengelola SPPG Wara Lagaligo)
+di - Jalan We Cudai, Kel. Lagaligo, Kec. Wara, Kota Palopo
+
+Berdasarkan hasil monitoring terpadu Tim Pengawasan Bangunan Gedung Dinas PUPR Kota Palopo terhadap 15 (lima belas) Dapur Satuan Pelayanan Pemenuhan Gizi (SPPG) se-Kota Palopo, dengan ini disampaikan:
+
+1. Bahwa bangunan yang dipergunakan sebagai Dapur SPPG Wara Lagaligo di Jl. We Cudai BELUM MEMILIKI Persetujuan Bangunan Gedung (PBG) untuk fungsi usaha pengolahan makanan skala massal.
+2. Bahwa bangunan tersebut BELUM MEMILIKI Sertifikat Laik Fungsi (SLF) sebagaimana diwajibkan dalam Peraturan Pemerintah Nomor 16 Tahun 2021.
+3. Menginstruksikan kepada pihak Yayasan Datok Sulaiman untuk segera menghentikan modifikasi ruang tanpa izin dan mengajukan kelengkapan dokumen teknis arsitektur, struktur, dan mekanikal/sanitasi dalam tenggat waktu 14 (empat belas) hari kerja.
+
+Apabila teguran ini tidak diindahkan, Pemerintah Kota Palopo akan mengambil tindakan penertiban administratif berupa penutupan sementara operasional fasilitas dapur.
+
+Walikota Palopo / Kepala Dinas PUPR Kota Palopo
+[Cap & TTD Resmi Terdaftar]</div>
+      <div class="hash-seal">SHA-256 HASH: d830192847192834bce9012487192038471920834b912048c8912401829471ab</div>
+    </div>
+
+    <!-- Dokumen 3 -->
+    <div class="doc-card">
+      <span class="badge badge-red">BERKAS 03 · UJI LABORATORIUM MIKROBIOLOGI</span>
+      <h3>LAB-MIKROBIOLOGI-UJI-SAMPEL-AYAM.enc</h3>
+      <div class="doc-meta">
+        <span>Penguji: Laboratorium Kesehatan Daerah (Labkesda) Palopo</span>
+        <span>Ukuran: 3.1 MB</span>
+        <span>Tanggal: 22 Oktober 2026</span>
+      </div>
+      <div class="doc-content">LABORATORIUM KESEHATAN DAERAH (LABKESDA) KOTA PALOPO
+Jl. Dr. Ratulangi No. 14, Kota Palopo
+
+HASIL PEMERIKSAAN LABORATORIUM FORENSIK PANGAN
+No. Sampel: LAB-PLP-MBG/2026/10/041
+Tanggal Terima Sampel: 21 Oktober 2026, Pukul 10:30 WITA
+Pengirim Sampel: Tim Kesling Dinkes Palopo (dr. Irsan Anugrah)
+Jenis Sampel: Olahan Daging Ayam Goreng & Sisa Karkas Mentah SPPG Wara Lagaligo
+
+HASIL PENGUJIAN MIKROBIOLOGI:
+1. Angka Lempeng Total (ALT): 4.8 x 10^7 CFU/gram (Standar Baku Maksimal: 1.0 x 10^5 CFU/gram) -> MELEBIHI AMBANG AMAN (SANGAT KRITIS).
+2. Clostridium perfringens: Positif (1.2 x 10^4 CFU/gram) -> Menunjukkan pembusukan akibat jeda pendinginan.
+3. Salmonella sp.: Positif (ditemukan pada karkas dekat tulang paha ayam).
+4. Parasitologi / Entomologi Forensik: Ditemukan larva instar I dan II dari lalat ordo Diptera, famili Calliphoridae (Lalat Bangkai Daging). Perkiraan oviposisi (peletakan telur lalat) terjadi saat karkas berada di suhu kamar antara 19-20 Oktober malam.
+
+KESIMPULAN LABORATORIUM:
+Sampel makanan dinyatakan TIDAK LAIK KONSUMSI MANUSIA. Kondisi terjadi akibat kontaminasi bahan baku awal dan rusaknya sistem rantai dingin di penyimpanan.</div>
+      <div class="hash-seal">SHA-256 HASH: 3f8901247a192834b9012834c8912048fe74912048bce901283471029481bc29</div>
+    </div>
+
+    <!-- Dokumen 4 -->
+    <div class="doc-card">
+      <span class="badge badge-emerald">BERKAS 04 · BUKU MUTASI PERBANKAN & FORENSIK REKENING</span>
+      <h3>LOG-MUTASI-SULSELBAR-MANDIRI-ILISIT.enc</h3>
+      <div class="doc-meta">
+        <span>Sumber: PPATK Trace Audit & Rekening Koran Bank Mitra</span>
+        <span>Ukuran: 6.2 MB</span>
+        <span>Total Temuan: Rp 183.000.000,-</span>
+      </div>
+      <div class="doc-content">LAPORAN FORENSIK TRANSAKSI KEUANGAN & ANOMALI ALIRAN DANA
+Kode Kasus: FIN-MBG-PLP-2026-X
+Periode Audit: 01 Oktober 2026 s/d 24 Oktober 2026
+
+REKENING UTAMA SUMBER DANA MBG:
+Bank: Bank BPD Sulselbar Cabang Palopo
+No. Rekening: 120-003-88912-4
+Pemilik: SPPG Wara Lagaligo (Yayasan Ponpes Modern Datok Sulaiman)
+
+TEMUAN TRANSAKSI MENCURIGAKAN:
+1. 17 Okt 2026 (21:14 WITA): Debet Rp 87.500.000 ke BCA 792-510-9431 a.n CV Berkah Lagaligo Pratama (Pihak ketiga pengadaan ayam tanpa NKV).
+2. 18 Okt 2026 (09:32 WITA): Kredit balik Rp 32.000.000 dari CV Berkah Lagaligo Pratama ke Bank Mandiri 174-00-0284719-8 a.n Mansyur Baharuddin (Bendahara SPPG).
+3. 18 Okt 2026 (14:05 WITA): Debet Rp 45.000.000 ke BRI 5041-01-019842-53-1 a.n H. Ruslan Ambo Dalle dengan keterangan fiktif 'Servis Chiller'.
+4. 21 Okt 2026 (11:40 WITA): Transfer Rp 18.500.000 dari Mandiri Mansyur ke BNI 089-112-9043 a.n M. Rusli S. (Kepala SPPG) pasca sidak Dinkes.
+5. 23 Okt 2026 (23:44 WITA): Penarikan tunai ATM BPD Sulselbar Jl. Andi Djemma sebesar Rp 45.000.000 (9x penarikan berturut-turut tanpa SPJ).
+
+TOTAL DANA TERINDIKASI DIVERSI/PENYIMPANGAN: Rp 183.000.000,-</div>
+      <div class="hash-seal">SHA-256 HASH: 59102834b9012834c8912048fe74912048bce901283471029481bc29b7e21a88</div>
+    </div>
+
+    <!-- Dokumen 5 -->
+    <div class="doc-card">
+      <span class="badge badge-cyan">BERKAS 05 · LOG DIGITAL ROOT DVR CCTV</span>
+      <h3>CCTV-SYSTEM-TAMPERING-AUDIT-ROOT.enc</h3>
+      <div class="doc-meta">
+        <span>Partisi Root: /dev/sda1 (Hikvision DVR DS7208)</span>
+        <span>Ukuran: 5.5 MB</span>
+        <span>Integritas: NTP Synced id.pool.ntp.org</span>
+      </div>
+      <div class="doc-content">DIGITAL FORENSIC EXTRACTION REPORT - DVR NVR STORAGE
+Target Device: HIK-DS7208-HQHI-K1 (Firmware v4.21.002)
+MAC Address: 44:19:B6:8F:2A:10
+Storage Partition: /dev/sda1 (Ext4 Mounted Root)
+
+LOG ANOMALI SISTEM & TAMPERING EVENT:
+[19-10-2026 20:18:45 WITA] SENSOR-02 TRIGGER: Chiller Room Thermocouple Power Lost (0.0 V).
+[19-10-2026 20:19:02 WITA] MANUAL OVERRIDE: User 'admin_sppg' disabled temperature alert buzzer.
+[19-10-2026 20:20:11 WITA] CAM-02: Human movement detected (Matching Personnel PER-04 Syamsuddin).
+[20-10-2026 04:02:15 WITA] SENSOR-02 TRIGGER: Chiller Room Thermocouple Restored. Temperature reading: 27.8 Celsius.
+[20-10-2026 04:35:12 WITA] CAM-03: Heavy chemical substance (acetic acid vinegar 25%) poured into washing container.
+[21-10-2026 15:42:00 WITA] CAM-04: Hand-to-hand envelope transfer logged between PER-02 and PER-05.
+
+TIMESTAMP INTEGRITY CHECK:
+NTP Synchronized with id.pool.ntp.org. Tidak ada time-skipping atau pemotongan frame file .mp4.
+SHA-256 CCTV RAW MASTER HASH: 8bf924acdd0928f615438819a5bc72384a8677c729e843bbd62f4410e53a2791</div>
+      <div class="hash-seal">SHA-256 HASH: 92834bce9012487192038471920834b912048c8912401829471abd8301928471</div>
+    </div>
+
+    <!-- Section: Matriks 15 Dapur SPPG di Palopo -->
+    <h2>3. DAFTAR 15 DAPUR SPPG KOTA PALOPO YANG MENDAPAT SURAT TEGURAN PEMKOT</h2>
+    <div class="doc-card">
+      <table class="table-custom">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Satuan Pelayanan (SPPG)</th>
+            <th>Wilayah (Kec/Kel)</th>
+            <th>Yayasan Pengelola</th>
+            <th>Izin PBG</th>
+            <th>Sertifikat SLF</th>
+            <th>Status SLHS</th>
+            <th style="text-align: right;">Kapasitas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td>01</td>
+            <td>SPPG Wara Lagaligo (Datok Sulaiman) [FOKUS AUDIT]</td>
+            <td>Kec. Wara / Kel. Lagaligo</td>
+            <td>Yayasan Ponpes Modern Datok Sulaiman</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Ditangguhkan</td>
+            <td style="text-align: right;">3.200 / hr</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>SPPG Wara Timur Ponpes Al-Huda</td>
+            <td>Kec. Wara Timur / Kel. Pontap</td>
+            <td>Yayasan Pendidikan Al-Huda</td>
+            <td>Proses Terbit</td>
+            <td>Verifikasi Lapangan</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">2.400 / hr</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>SPPG Wara Selatan Songka</td>
+            <td>Kec. Wara Selatan / Kel. Songka</td>
+            <td>Koperasi Pangan Mandiri Sawerigading</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">1.850 / hr</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>SPPG Wara Barat Battang</td>
+            <td>Kec. Wara Barat / Kel. Battang</td>
+            <td>Yayasan Bina Insani Luwu Raya</td>
+            <td>Proses Terbit</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">1.200 / hr</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>SPPG Telluwanua Jaya</td>
+            <td>Kec. Telluwanua / Kel. Marabombi</td>
+            <td>Yayasan Wakaf Amanah Umat</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">2.100 / hr</td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td>SPPG Wara Utara Salobulo</td>
+            <td>Kec. Wara Utara / Kel. Salobulo</td>
+            <td>CV Berkah Pangan Palopo</td>
+            <td>Proses Terbit</td>
+            <td>Verifikasi Lapangan</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">2.600 / hr</td>
+          </tr>
+          <tr>
+            <td>07</td>
+            <td>SPPG Bara Rampoang</td>
+            <td>Kec. Bara / Kel. Rampoang</td>
+            <td>Yayasan Harapan Bangsa Luwu</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">1.950 / hr</td>
+          </tr>
+          <tr>
+            <td>08</td>
+            <td>SPPG Mungkajang Kambo</td>
+            <td>Kec. Mungkajang / Kel. Kambo</td>
+            <td>Koperasi Warga Mungkajang Sejahtera</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">1.100 / hr</td>
+          </tr>
+          <tr>
+            <td>09</td>
+            <td>SPPG Sendana Purangi</td>
+            <td>Kec. Sendana / Kel. Purangi</td>
+            <td>Yayasan Tunas Madani Palopo</td>
+            <td>Proses Terbit</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">1.400 / hr</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>SPPG Lagaligo Tengah</td>
+            <td>Kec. Wara / Kel. Lagaligo</td>
+            <td>Yayasan Al-Ikhlas Lagaligo</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">2.200 / hr</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>SPPG Amassangan Sehat</td>
+            <td>Kec. Wara / Kel. Amassangan</td>
+            <td>CV Mitra Kuliner Sawerigading</td>
+            <td>Proses Terbit</td>
+            <td>Verifikasi Lapangan</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">2.050 / hr</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>SPPG Boting Raya</td>
+            <td>Kec. Wara Barat / Kel. Boting</td>
+            <td>Yayasan Cahaya Boting Sejahtera</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">1.600 / hr</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>SPPG Malatunrung Timur</td>
+            <td>Kec. Wara Timur / Kel. Malatunrung</td>
+            <td>Koperasi Berkah Nelayan Pesisir</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">1.750 / hr</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>SPPG Balandai Perintis</td>
+            <td>Kec. Bara / Kel. Balandai</td>
+            <td>Yayasan Pendidikan Terpadu Palopo</td>
+            <td>Proses Terbit</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">2.300 / hr</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>SPPG Pattene Wara Utara</td>
+            <td>Kec. Wara Utara / Kel. Pattene</td>
+            <td>Yayasan Peduli Anak Bangsa</td>
+            <td>Belum Memiliki</td>
+            <td>Belum Memiliki</td>
+            <td>Evaluasi</td>
+            <td style="text-align: right;">1.500 / hr</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section: Identitas 5 Personel Lengkap Alamat Rumah -->
+    <h2>4. IDENTITAS PERSONEL LENGKAP DENGAN ALAMAT RUMAH & BAP DI KOTA PALOPO</h2>
+    <div class="grid-2">
+      <!-- Person 1 -->
+      <div class="person-card">
+        <span class="badge badge-red">TERPERIKSA UTAMA</span>
+        <h3>1. M. Rusli S., S.Pd.I (Ust. Rusli)</h3>
+        <p style="font-size: 11px; color: #94a3b8; font-family: monospace;">NIK: 7373011405820003</p>
+        <p style="font-size: 12px; margin-top: 6px;"><strong>Jabatan:</strong> Kepala SPPG Wara Lagaligo & Pengurus Yayasan Ponpes Datok Sulaiman</p>
+        <p style="font-size: 12px; margin-top: 4px; color: #38bdf8;"><strong>Alamat Rumah:</strong> Jalan We Cudai No. 42B, RT 02 / RW 01, Kompleks Asrama Putra, Kelurahan Lagaligo, Kecamatan Wara, Kota Palopo</p>
+        <div style="margin-top: 8px; font-size: 11px; background: #020617; padding: 8px; border-radius: 4px;">
+          <strong>Inkonsistensi:</strong> Tercatat mutasi masuk Rp 18.500.000 ke rekening BNI miliknya pasca sidak Dinkes, bertentangan dengan alibi awal tidak menerima dana rekanan.
+        </div>
+      </div>
+
+      <!-- Person 2 -->
+      <div class="person-card">
+        <span class="badge badge-red">PIHAK TERINDIKASI</span>
+        <h3>2. Mansyur Baharuddin, S.E.</h3>
+        <p style="font-size: 11px; color: #94a3b8; font-family: monospace;">NIK: 7373012108860001</p>
+        <p style="font-size: 12px; margin-top: 6px;"><strong>Jabatan:</strong> Koordinator Keuangan & Logistik SPPG Wara Lagaligo</p>
+        <p style="font-size: 12px; margin-top: 4px; color: #38bdf8;"><strong>Alamat Rumah:</strong> Jalan Pongsimpin No. 18, RT 03 / RW 02 (Dekat Gerbang Ponpes), Kelurahan Tompotikka, Kecamatan Wara, Kota Palopo</p>
+        <div style="margin-top: 8px; font-size: 11px; background: #020617; padding: 8px; border-radius: 4px;">
+          <strong>Inkonsistensi:</strong> Menerima setoran balik (kickback) Rp 32.000.000 di rekening Mandiri pribadinya dari suplier CV Berkah Lagaligo & terekam menarik Rp 45.000.000 di ATM malam hari.
+        </div>
+      </div>
+
+      <!-- Person 3 -->
+      <div class="person-card">
+        <span class="badge badge-emerald">SAKSI KUNCI</span>
+        <h3>3. Nur Asmawati, A.Md.Gz</h3>
+        <p style="font-size: 11px; color: #94a3b8; font-family: monospace;">NIK: 7373026509930002</p>
+        <p style="font-size: 12px; margin-top: 6px;"><strong>Jabatan:</strong> Staf Ahli Gizi & Quality Assurance Dapur</p>
+        <p style="font-size: 12px; margin-top: 4px; color: #38bdf8;"><strong>Alamat Rumah:</strong> Jalan Rambutan No. 07, RT 01 / RW 04, Kelurahan Dangerakko, Kecamatan Wara, Kota Palopo</p>
+        <div style="margin-top: 8px; font-size: 11px; background: #020617; padding: 8px; border-radius: 4px;">
+          <strong>Keterangan BAP:</strong> Telah melayangkan komplain bahwa daging ayam berbau masam dan berlendir saat tiba, namun dipaksa tetap mengolah akibat desakan waktu distribusi.
+        </div>
+      </div>
+
+      <!-- Person 4 -->
+      <div class="person-card">
+        <span class="badge badge-amber">TERPERIKSA UTAMA</span>
+        <h3>4. Syamsuddin (Chef Udin)</h3>
+        <p style="font-size: 11px; color: #94a3b8; font-family: monospace;">NIK: 7373031002790004</p>
+        <p style="font-size: 12px; margin-top: 6px;"><strong>Jabatan:</strong> Kepala Juru Masak (Chef) Dapur Basah</p>
+        <p style="font-size: 12px; margin-top: 4px; color: #38bdf8;"><strong>Alamat Rumah:</strong> Lorong Damai No. 12, RT 04 / RW 02, Kelurahan Boting, Kecamatan Wara Barat, Kota Palopo</p>
+        <div style="margin-top: 8px; font-size: 11px; background: #020617; padding: 8px; border-radius: 4px;">
+          <strong>Inkonsistensi:</strong> Mengaku mematikan kompresor cold storage setiap malam untuk hemat listrik dan merebus ayam berbau dengan larutan cuka dan kunyit pekat.
+        </div>
+      </div>
+
+      <!-- Person 5 -->
+      <div class="person-card">
+        <span class="badge badge-red">PIHAK TERINDIKASI</span>
+        <h3>5. Kadir Amran (Kadir Berkah)</h3>
+        <p style="font-size: 11px; color: #94a3b8; font-family: monospace;">NIK: 7373010711880005</p>
+        <p style="font-size: 12px; margin-top: 6px;"><strong>Jabatan:</strong> Direktur CV Berkah Lagaligo Pratama (Pemasok Daging Non-NKV)</p>
+        <p style="font-size: 12px; margin-top: 4px; color: #38bdf8;"><strong>Alamat Rumah:</strong> Jalan Veteran No. 89, RT 01 / RW 03, Kelurahan Amassangan, Kecamatan Wara, Kota Palopo</p>
+        <div style="margin-top: 8px; font-size: 11px; background: #020617; padding: 8px; border-radius: 4px;">
+          <strong>Inkonsistensi:</strong> Memasok karkas ayam afkir tanpa es menggunakan mobil pikap terpal hitam dan memalsukan stempel sertifikat veteriner.
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Note -->
+    <div class="footer">
+      <p>SALINAN OTENTIK SISTEM FORENSIK AUDIT PEMERINTAH KOTA PALOPO · TAHUN 2026</p>
+      <p style="margin-top: 4px;">ROOT LEDGER MERKLE ROOT HASH: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+    </div>
+  </div>
+
+</body>
+</html>
